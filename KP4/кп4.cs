@@ -76,49 +76,6 @@ namespace kp4
         }
        
         public SLAR() { }
-       /* public SLAR SampleIterationMethod()
-        {
-            double v_1 = vector[0] / matrix[0, 0];
-            double v_2 = vector[1] / matrix[1, 1];
-            double v_3 = vector[2] / matrix[2, 2];
-            double v_4 = vector[3] / matrix[3, 3];
-            double x1 = 0, x2 = 0, x3 = 0, x4 = 0;
-            double xk1, xk2, xk3, xk4;
-            int k = 0;
-            var flag = true;
-            for (int i = 0; flag && i < matrix.RowCount; i++)
-            {
-                for (int j = 0; j < matrix.ColumnCount; j++)
-                {
-                    if (matrix[i, j] == 0 && i == j) { flag = false; break; }
-                }
-            }
-            if (flag == true)
-            {
-
-                do
-                {
-
-                    k++;
-                    xk1 = x1; xk2 = x2; xk3 = x3; xk4 = x4;
-                    x1 = (vector[0] - matrix[0, 1] * v_2 - matrix[0, 2] * v_3 - matrix[0, 3] * v_4) / matrix[0, 0];
-                    x2 = (vector[1] - matrix[1, 0] * v_1 - matrix[1, 2] * v_3 - matrix[1, 3] * v_4) / matrix[1, 1];
-                    x3 = (vector[2] - matrix[2, 0] * v_1 - matrix[2, 1] * v_2 - matrix[2, 3] * v_4) / matrix[2, 2];
-                    x4 = (vector[3] - matrix[3, 0] * v_1 - matrix[3, 1] * v_2 - matrix[3, 2] * v_3) / matrix[3, 3];
-                    v_1 = x1; v_2 = x2; v_3 = x3; v_4 = x4;
-                }
-                while (Math.Abs(x1 - xk1) <= 1E-3 || Math.Abs(x2 - xk2) <= 1E-3 || Math.Abs(x3 - xk3) <= 1E-3 || Math.Abs(x4 - xk4) <= 1E-3);
-                Console.WriteLine($"\n\n\n\t\t\tДля варiанту {Variant}\n\nx1 --> {x1}\nx2 --> {x2}\nx3 --> {x3}\nx4 --> {x4}\n\nIтерацiя --> {k}");
-                if (matrix.L2Norm() < 1) { Console.WriteLine("\n\n\tУмова збiжностi виконана успiшно\n\n"); }
-                else { Console.WriteLine("\n\n\tУмова збiжностi не виконується\n\n"); }
-
-            }
-            else
-            {
-                Console.WriteLine($"\n\n\t\t\tДля варiанту {Variant}\n\n\tДана слар не задовольняє умову для виконання методом iтерацiй\n\n\tIснує aii=0\n\n");
-            }
-            return this;
-        }*/
         public SLAR JacobiMethod()
         {
             double X0 = 0;
